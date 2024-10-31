@@ -16,8 +16,14 @@ DATA = {
         'сыр, ломтик': 1,
         'помидор, ломтик': 1,
     },
+    'goodevening': {
+        'warm tea, cups': 1,
+        'tasty buter, packs': 1,
+        'good video, quantity': 20
+    }
     # можете добавить свои рецепты ;)
 }
+
 
 # Напишите ваш обработчик. Используйте DATA как источник данных
 # Результат - render(request, 'calculator/index.html', context)
@@ -28,3 +34,15 @@ DATA = {
 #     'ингредиент2': количество2,
 #   }
 # }
+
+def cooking(request, recipe):
+    quantity = int(request.GET.get("servings", 1))
+    food = dict(DATA[recipe])
+    for items in food:
+        food[items] = food.get(items)*quantity
+
+    context = dict(
+       recipe=food
+    )
+
+    return render(request, 'calculator/index.html', context)
