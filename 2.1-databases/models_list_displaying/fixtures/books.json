@@ -16,5 +16,33 @@
       "author": "Джордж Оруэл",
       "pub_date": "2016-12-06"
     }
+  },
+  {
+    "model": "books.book",
+    "pk": 3,
+    "fields": {
+      "name": "Another book",
+      "author": "Some author",
+      "pub_date": "2016-12-06"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 4,
+    "fields": {
+      "name": "Some book",
+      "author": "Another author",
+      "pub_date": "2020-10-06"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 4,
+    "fields": {
+      "name": "Some OLD book",
+      "author": "Another OLD author",
+      "pub_date": "1989-10-06"
+    }
   }
+
 ]

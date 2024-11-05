@@ -14,10 +14,17 @@
           <div class="book col-md-4">
               <h2><a href="">{{ book.name }}</a></h2>
               <p>Автор: {{book.author}}</p>
-              <p>Дата публикации: <a href="/books/{{book.pub_date|date:"Y-m-d" }}">{{book.pub_date|date:"Y-m-d" }} </a></p>
+              <p>Дата публикации: {{book.pub_date|date:"Y-m-d" }} </p>
           </div>
       {% endfor %}
         </div>
+
+
+
+        <a href="/books/{{date_before}}/">{{date_before}}</a>
+
+        <a href="/books/{{date_after}}/">{{date_after}}</a>
+
   </div>
     </div>
 
